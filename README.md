@@ -71,13 +71,24 @@ These instructions will guide you on how to set up and run the video encryption 
 
 ```
 video-encryption-app/
-├── uploads/                # Directory to store uploaded and encrypted files
-├── server.js               # Main application file
+├── config/                 # Configuration files
+│   └── multer.js           # Multer middleware configuration
+├── controllers/            # Controller logic
+│   └── videoController.js  # Handles video operations (upload, encrypt, decrypt)
+├── routes/                 # Route definitions
+│   └── videoRoutes.js      # Express routes for video endpoints
+├── services/               # core business logic
+│   ├── decryptionService.js# Video decryption logic
+│   └── encryptionService.js# Video encryption logic
+├── uploads/                # Directory to store processed files
+├── views/                  # EJS templates
+│   └── index.ejs           # Main user interface
+├── node_modules/           # Dependencies
+├── .gitignore              # Git ignore configuration
 ├── package.json            # Project metadata and dependencies
-├── package-lock.json       # Records the exact versions of dependencies
-├── views/                  # Directory containing EJS templates
-│   └── index.ejs           # Main HTML template
-└── node_modules/           # Directory containing installed npm packages (not in repo)
+├── package-lock.json       # Dependency lock file
+├── README.md               # Project documentation
+└── server.js               # Application entry point
 ```
 
 ## 📸 Screenshots
